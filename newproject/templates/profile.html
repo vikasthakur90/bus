@@ -1,0 +1,183 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <style>
+    body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+    fieldset {
+        border: double;
+        width: 45%;
+        padding: 5%;
+        }
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("/static/images/buscd.jpg");
+
+  height: 800px;
+  width: 960px
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+    .btn {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #8e7d3e;
+  color: white;
+}
+ #my1 {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px ;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.contain1 {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  width: 350px;
+  height: 490px;
+  padding: 20px;
+  background-color: white;
+}
+</style>
+
+</head>
+<body>
+<br>
+<br>
+<div class="bg-img">
+    <br>
+    <br>
+
+<form class="contain1">
+    <fieldset style="width:300"><legend><i>SEARCH BUS</i></legend>
+    <div>
+    <label> <b> ENTER SOURCE: </b>   </label>
+        <select class="mdb-select md-form" searchable="Search here.." id="my1">
+            <option value="" disabled selected> ENTER SOURCE </option>
+            <option value="1">DEWAS</option>
+            <option value="2">INDORE</option>
+            <option value="3">UJJAIN</option>
+            <option value="3">BHOPAL</option>
+            <option value="3">PUNE</option>
+            <option value="3">PUNE</option>
+            <option value="3">MUMBAI</option>
+            <option value="3">SHIRDI</option>
+            <option value="3">BENGALURU</option>
+            <option value="3">HYDERABAD</option>
+            <option value="3">DELHI</option>
+            <option value="3">GOA</option>
+            <option value="3">CHENNAI</option>
+            <option value="3">AHMEDABAD</option>
+            <option value="3">VIJAYAWADA</option>
+            <option value="3">VIZAG</option>
+            <option value="3">CALCUTTA</option>
+            <option value="3">NASHIK</option>
+            <option value="3">RAJKOT</option>
+            <option value="3">KOTA</option>
+            <option value="3">JODHPUR</option>
+            <option value="3">JABALPUR</option>
+            <option value="3">GWALIOR</option>
+            <option value="3">MEERUT</option>
+            <option value="3">RANCHI</option>
+            <option value="3">JAIPUR</option>
+            <option value="3">TIRUPATI</option>
+            <option value="3">YELLAPUR</option>
+            <option value="3">UDAIPUR</option>
+            <option value="3">OOTY</option>
+            <option value="3">PONDICHERRY</option>
+            <option value="3">GORAKHPUR</option>
+            <option value="3">DEHRADUN</option>
+            <option value="3">GOA</option>
+            <option value="3">MANDSAUR</option>
+            <option value="3">MANALI</option>
+        </select>
+        <br>
+        <br>
+    <label><b> ENTER DESTINATION:  </b></label>
+        <select class="mdb-select md-form" searchable="Search here.." id="my1">
+            <option value="" disabled selected> ENTER DESTINATION </option>
+            <option value="1">DEWAS</option>
+            <option value="2">INDORE</option>
+            <option value="3">UJJAIN</option>
+            <option value="3">BHOPAL</option>
+            <option value="3">PUNE</option>
+            <option value="3">PUNE</option>
+            <option value="3">MUMBAI</option>
+            <option value="3">SHIRDI</option>
+            <option value="3">BENGALURU</option>
+            <option value="3">HYDERABAD</option>
+            <option value="3">DELHI</option>
+            <option value="3">GOA</option>
+            <option value="3">CHENNAI</option>
+            <option value="3">AHMEDABAD</option>
+            <option value="3">VIJAYAWADA</option>
+            <option value="3">VIZAG</option>
+            <option value="3">CALCUTTA</option>
+            <option value="3">NASHIK</option>
+            <option value="3">RAJKOT</option>
+            <option value="3">KOTA</option>
+            <option value="3">JODHPUR</option>
+            <option value="3">JABALPUR</option>
+            <option value="3">GWALIOR</option>
+            <option value="3">MEERUT</option>
+            <option value="3">RANCHI</option>
+            <option value="3">JAIPUR</option>
+            <option value="3">TIRUPATI</option>
+            <option value="3">YELLAPUR</option>
+            <option value="3">UDAIPUR</option>
+            <option value="3">OOTY</option>
+            <option value="3">PONDICHERRY</option>
+            <option value="3">GORAKHPUR</option>
+            <option value="3">DEHRADUN</option>
+            <option value="3">GOA</option>
+            <option value="3">MANDSAUR</option>
+            <option value="3">MANALI</option>
+        </select>
+        <br>
+        <br>
+        <label><b>DATE OF TOUR:</b></label>
+    <input type="date" id="my1">
+        <br>
+        <br>
+    <input type="submit" class="btn" placeholder="SEARCH BUS">
+    </div>
+    </fieldset>
+</form>
+    <br>
+    <br>
+</div>
+
+</body>
+</html>
+{% endblock %}
