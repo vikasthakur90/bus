@@ -3,6 +3,13 @@
 {% block content %}
 <html lang="en">
 <head>
+    {% if messages %}
+    {% for message in messages %}
+    {% if message.tags %}  <script>alert("{{ message }}")</script> {% endif %}
+
+    {% endfor %}
+
+    {% endif %}
 
     <meta charset="UTF-8">
     <title>Profile</title>
@@ -79,90 +86,91 @@
     <br>
     <br>
 
-<form class="contain1">
+<form action="profile" class="contain1" method="post">
+    {% csrf_token %}
     <fieldset style="width:300"><legend><i>SEARCH BUS</i></legend>
     <div>
     <label> <b> ENTER SOURCE: </b>   </label>
-        <select class="mdb-select md-form" searchable="Search here.." id="my1">
+        <select class="mdb-select md-form" name="source" searchable="Search here.." id="my1">
             <option value="" disabled selected> ENTER SOURCE </option>
-            <option value="1">DEWAS</option>
-            <option value="2">INDORE</option>
-            <option value="3">UJJAIN</option>
-            <option value="3">BHOPAL</option>
-            <option value="3">PUNE</option>
-            <option value="3">PUNE</option>
-            <option value="3">MUMBAI</option>
-            <option value="3">SHIRDI</option>
-            <option value="3">BENGALURU</option>
-            <option value="3">HYDERABAD</option>
-            <option value="3">DELHI</option>
-            <option value="3">GOA</option>
-            <option value="3">CHENNAI</option>
-            <option value="3">AHMEDABAD</option>
-            <option value="3">VIJAYAWADA</option>
-            <option value="3">VIZAG</option>
-            <option value="3">CALCUTTA</option>
-            <option value="3">NASHIK</option>
-            <option value="3">RAJKOT</option>
-            <option value="3">KOTA</option>
-            <option value="3">JODHPUR</option>
-            <option value="3">JABALPUR</option>
-            <option value="3">GWALIOR</option>
-            <option value="3">MEERUT</option>
-            <option value="3">RANCHI</option>
-            <option value="3">JAIPUR</option>
-            <option value="3">TIRUPATI</option>
-            <option value="3">YELLAPUR</option>
-            <option value="3">UDAIPUR</option>
-            <option value="3">OOTY</option>
-            <option value="3">PONDICHERRY</option>
-            <option value="3">GORAKHPUR</option>
-            <option value="3">DEHRADUN</option>
-            <option value="3">GOA</option>
-            <option value="3">MANDSAUR</option>
-            <option value="3">MANALI</option>
+            <option value="DEWAS">DEWAS</option>
+            <option value="INDORE">INDORE</option>
+            <option value="UJJAIN">UJJAIN</option>
+            <option value="BHOPAL">BHOPAL</option>
+            <option value="PUNE">PUNE</option>
+            <option value="SEHORE">SEHORE</option>
+            <option value="MUMBAI">MUMBAI</option>
+            <option value="SHIRDI">SHIRDI</option>
+            <option value="BENGALURU">BENGALURU</option>
+            <option value="HYDERABAD">HYDERABAD</option>
+            <option value="DELHI">DELHI</option>
+            <option value="GOA">GOA</option>
+            <option value="CHENNAI">CHENNAI</option>
+            <option value="AHMEDABAD">AHMEDABAD</option>
+            <option value="VIJAYAWADA">VIJAYAWADA</option>
+            <option value="VIZAG">VIZAG</option>
+            <option value="CALCUTTA">CALCUTTA</option>
+            <option value="NASHIK">NASHIK</option>
+            <option value="RAJKOT">RAJKOT</option>
+            <option value="KOTA">KOTA</option>
+            <option value="JODHPUR">JODHPUR</option>
+            <option value="JABALPUR">JABALPUR</option>
+            <option value="GWALIOR">GWALIOR</option>
+            <option value="MEERUT">MEERUT</option>
+            <option value="RANCHI">RANCHI</option>
+            <option value="JAIPUR">JAIPUR</option>
+            <option value="TIRUPATI">TIRUPATI</option>
+            <option value="YELLAPUR">YELLAPUR</option>
+            <option value="UDAIPUR">UDAIPUR</option>
+            <option value="OOTY">OOTY</option>
+            <option value="PONDICHERRY">PONDICHERRY</option>
+            <option value="GORAKHPUR">GORAKHPUR</option>
+            <option value="DEHRADUN">DEHRADUN</option>
+            <option value="GOA">GOA</option>
+            <option value="MANDSAUR">MANDSAUR</option>
+            <option value="MANALI">MANALI</option>
         </select>
         <br>
         <br>
     <label><b> ENTER DESTINATION:  </b></label>
-        <select class="mdb-select md-form" searchable="Search here.." id="my1">
+        <select class="mdb-select md-form" name="destination" searchable="Search here.." id="my1">
             <option value="" disabled selected> ENTER DESTINATION </option>
-            <option value="1">DEWAS</option>
-            <option value="2">INDORE</option>
-            <option value="3">UJJAIN</option>
-            <option value="3">BHOPAL</option>
-            <option value="3">PUNE</option>
-            <option value="3">PUNE</option>
-            <option value="3">MUMBAI</option>
-            <option value="3">SHIRDI</option>
-            <option value="3">BENGALURU</option>
-            <option value="3">HYDERABAD</option>
-            <option value="3">DELHI</option>
-            <option value="3">GOA</option>
-            <option value="3">CHENNAI</option>
-            <option value="3">AHMEDABAD</option>
-            <option value="3">VIJAYAWADA</option>
-            <option value="3">VIZAG</option>
-            <option value="3">CALCUTTA</option>
-            <option value="3">NASHIK</option>
-            <option value="3">RAJKOT</option>
-            <option value="3">KOTA</option>
-            <option value="3">JODHPUR</option>
-            <option value="3">JABALPUR</option>
-            <option value="3">GWALIOR</option>
-            <option value="3">MEERUT</option>
-            <option value="3">RANCHI</option>
-            <option value="3">JAIPUR</option>
-            <option value="3">TIRUPATI</option>
-            <option value="3">YELLAPUR</option>
-            <option value="3">UDAIPUR</option>
-            <option value="3">OOTY</option>
-            <option value="3">PONDICHERRY</option>
-            <option value="3">GORAKHPUR</option>
-            <option value="3">DEHRADUN</option>
-            <option value="3">GOA</option>
-            <option value="3">MANDSAUR</option>
-            <option value="3">MANALI</option>
+            <option value="DEWAS">DEWAS</option>
+            <option value="INDORE">INDORE</option>
+            <option value="UJJAIN">UJJAIN</option>
+            <option value="BHOPAL">BHOPAL</option>
+            <option value="PUNE">PUNE</option>
+            <option value="SEHORE">SEHORE</option>
+            <option value="MUMBAI">MUMBAI</option>
+            <option value="SHIRDI">SHIRDI</option>
+            <option value="BENGALURU">BENGALURU</option>
+            <option value="HYDERABAD">HYDERABAD</option>
+            <option value="DELHI">DELHI</option>
+            <option value="GOA">GOA</option>
+            <option value="CHENNAI">CHENNAI</option>
+            <option value="AHMEDABAD">AHMEDABAD</option>
+            <option value="VIJAYAWADA">VIJAYAWADA</option>
+            <option value="VIZAG">VIZAG</option>
+            <option value="CALCUTTA">CALCUTTA</option>
+            <option value="NASHIK">NASHIK</option>
+            <option value="RAJKOT">RAJKOT</option>
+            <option value="KOTA">KOTA</option>
+            <option value="JODHPUR">JODHPUR</option>
+            <option value="JABALPUR">JABALPUR</option>
+            <option value="GWALIOR">GWALIOR</option>
+            <option value="MEERUT">MEERUT</option>
+            <option value="RANCHI">RANCHI</option>
+            <option value="JAIPUR">JAIPUR</option>
+            <option value="TIRUPATI">TIRUPATI</option>
+            <option value="YELLAPUR">YELLAPUR</option>
+            <option value="UDAIPUR">UDAIPUR</option>
+            <option value="OOTY">OOTY</option>
+            <option value="PONDICHERRY">PONDICHERRY</option>
+            <option value="GORAKHPUR">GORAKHPUR</option>
+            <option value="DEHRADUN">DEHRADUN</option>
+            <option value="GOA">GOA</option>
+            <option value="MANDSAUR">MANDSAUR</option>
+            <option value="MANALI">MANALI</option>
         </select>
         <br>
         <br>

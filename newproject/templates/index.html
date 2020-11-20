@@ -1,6 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+  </style>
 <style>
 /*
  * jQuery UI Datepicker 1.10.1
@@ -267,6 +278,41 @@ solid #4988BE;font-size:12px;height:auto;padding:0;float:left}.hotroute2{backgro
 zoom{from{-webkit-transform:scale(1.5,1.5)}to{-webkit-transform:scale(1, 1)}}@keyframes
 zoom{from{transform:scale(1.5,1.5)}to{transform:scale(1, 1)}}.carousel-inner .item
 img{-webkit-animation:zoom 20s;animation:zoom 20s}</style>
+	<style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+  .amenities-sect {
+    width: 100%;
+    float: left;
+    padding: 60px 6%;
+    margin-top: 60px;
+    box-sizing: border-box;
+    background: #EEE;
+    display: flex;
+}
+#mySlider {
+    position: relative;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#next, #prev {
+    position: absolute;
+    top: 47%;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 30px;
+}
+  </style>
+</head>
 <div id="demo" class="carousel slide" data-ride="carousel">
 
   <!-- Indicators -->
@@ -279,13 +325,13 @@ img{-webkit-animation:zoom 20s;animation:zoom 20s}</style>
   <!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{% static 'images\231.jpg' %}" alt="Los Angeles">
+      <img src="{% static 'images\31.jpg' %}" alt="Los Angeles">
     </div>
     <div class="carousel-item">
-      <img src="{% static 'images\2441.jpg' %}" alt="Chicago">
+      <img src="{% static 'images\312.jpg' %}" alt="Chicago">
     </div>
     <div class="carousel-item">
-      <img src="{% static 'images\2262.jpg' %}" alt="New York">
+      <img src="{% static 'images\162.jpg' %}" alt="New York">
     </div>
   </div>
 
@@ -301,17 +347,16 @@ img{-webkit-animation:zoom 20s;animation:zoom 20s}</style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <style>
-  /* Make the image fully responsive */
-  .carousel-inner img {
-    width: 100%;
-    height: 100%;
-  }
-  </style>
+
 <div class="amenities-sect">
-	  		<div id="mySlider" style="width: 597px;"><span id="prev" style="left:2%">‹</span><img src="{% static 'images\2311.jpg' %}" alt="" style="margin-right:5px;width: 598px;
-    height: 398px;"><img src="https://microsites-websitebuilder.s3.amazonaws.com/images/hanstravel.in-slider3-1-1552392497.jpg" alt="" style="margin-right:5px;"><img src="https://microsites-websitebuilder.s3.amazonaws.com/images/hanstravel.in-slider3-2-1552392497.jpg" alt="" style="margin-right:5px;"><img src="https://microsites-websitebuilder.s3.amazonaws.com/images/hanstravel.in-slider3-3-1558421490.jpg" alt="" style="margin-right:5px;"><img src="https://microsites-websitebuilder.s3.amazonaws.com/images/hanstravel.in-slider3-4-1558421490.jpg" alt="" style="margin-right:5px;"><span id="next" style="right:2%">›</span></div>
-  		<div class="mainmid"></div>
+	  		<div id="mySlider" style="width: 597px;"><span id="prev" style="left:2%">‹</span>
+				<img src="{% static 'images\121.jpg' %}" alt="" style="margin-right:5px;width: 588px;
+    height: 398px;">
+				<img src="" alt="" style="margin-right:5px;">
+				<img src="" alt="" style="margin-right:5px;">
+				<img src="" alt="" style="margin-right:5px;">
+				<img src="" alt="" style="margin-right:5px;"><span id="next" style="right:2%">›</span></div>
+
 
   	<div class="amets-wrap">
     	<div class="title">
@@ -482,27 +527,13 @@ img{-webkit-animation:zoom 20s;animation:zoom 20s}</style>
     	</div>
   	</div>
 </div>
+
 <footer>
     <div class="footer-box">
     <h3>ABOUT US</h3>
     <p></p><p>Darbar Travels has been a Commercial Business Transportation Company (now Private Limited) operating since 2000s. We have been operating on 10+ routes covering more than 20 cities (including Mumbai, Pune, Bangalore, Hyder...<a href="/about_us">More</a></p>
   </div>
     <div class="footer-box">
-    <h3>Explore</h3>
-
-    <ul>
-      <li><a href="/privacy">Privacy</a></li>
-      <li><a href="/feedback">Feedback</a></li>
-      <li><a href="/about_us">About us</a></li>
-      <li><a href="/contact_us">Contact Us</a></li>
-    </ul>
-
-    <ul>
-      <li><a href="/ticket/mybooking">View Booking</a></li>
-      <li><a href="/ticket/cancel">Cancellation</a></li>
-      <li><a href="/photogallery">Gallery</a></li>
-      <li><a href="/terms_and_conditions">Terms &amp; Condition</a></li>
-    </ul>
 
   </div>
     <div class="footer-box">
@@ -513,5 +544,7 @@ img{-webkit-animation:zoom 20s;animation:zoom 20s}</style>
         <p>Booking Contact : 7828889875</p>
       </div>
   </footer>
-<script src = "{% static 'css\vik.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 {% endblock %}
